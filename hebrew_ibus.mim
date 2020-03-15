@@ -1,11 +1,11 @@
 (input-method t hebrew_ibus)
 
 (description
- "Classical Hebrew characters")
+ "SIL Biblical Hebrew")
 
 (title "Hebrew_Ibus")
 
-;; Classical Hebrew input method for Ibus.
+;; Biblical Hebrew input method for Ibus following SIL Keyboard.
 ;;
 ;; To install in many Linux variants, put in ~/.m17n.d .
 
@@ -13,6 +13,17 @@
   (trans
 
    ;; Normal
+   ("\`" 0x20ac)	;; Euro
+   ("1" 0x0031)		;; 1
+   ("2" 0x0032)		;; 1
+   ("3" 0x0033)		;; 1
+   ("4" 0x0034)		;; 1
+   ("5" 0x0035)		;; 1
+   ("6" 0x0036)		;; 1
+   ("7" 0x0037)		;; 1
+   ("8" 0x0038)		;; 1
+   ("9" 0x0039)		;; 1
+   ("0" 0x0030)		;; 1
    ("-" 0x05be)		;; Maqaf
    ("=" 0x05bc)		;; Dagesh
    ("q" 0x05e7)		;; Qof
@@ -25,6 +36,8 @@
    ("i" 0x05b4)		;; Hiriq
    ("o" 0x05b9)		;; Holam
    ("p" 0x05e4)		;; Pe
+   ("\[" 0x005d)	;; Left Bracket
+   ("\]" 0x005d)	;; Right Bracket
    ("\\" 0x05c0)	;; Paseq
    ("a" 0x05b7)		;; Patah
    ("s" 0x05e1)		;; Samekh
@@ -36,6 +49,7 @@
    ("k" 0x05db)		;; Kaf
    ("l" 0x05dc)		;; Lamed
    (";" 0x05b0)		;; Sheva
+   ("\'" 0x2019)	;; Right quote
    ("z" 0x05d6)		;; Zayin
    ("x" 0x05d7)		;; Het
    ("c" 0x05e6)		;; Tsadi
@@ -43,74 +57,85 @@
    ("b" 0x05d1)		;; Bet
    ("n" 0x05e0)		;; Nun
    ("m" 0x05de)		;; Mem
+   ("\," 0x002c)	;; Comma
+   ("\." 0x002e)	;; Period
+   ("\/" 0x002f)	;; Slash
 
    ;; Shift
-   ("~" 0x20aa)		;; Sheqel
-   ("@" 0x0598)		;; Zarqa
+   ("\~" 0x20aa)	;; Sheqel
+   ("\!" 0x0021)	;; Exclamation Point
+   ("\@" 0x0598)	;; Zarqa
    ("\#" 0x05a8)	;; Qadma
-   ("$" 0x059c)		;; Geresh
+   ("\$" 0x059c)	;; Geresh
    ("\%" 0x059e)	;; Gershayim
    ("\&" 0x05ac)	;; Iluy
    ("\*" 0x059d)	;; G. Muqdam
+   ("\(" 0x0029)	;; Left Paren
+   ("\)" 0x0028)	;; Right Paren
    ("\_" 0x2013)	;; En dash
    ("Q" 0x0597)		;; Revia
    ("E" 0x05b5)		;; Tsere
    ("Y" 0x059f)		;; Qar. Para
    ("O" 0x05ba)		;; Holom for Vav
    ("P" 0x05e3)		;; Final Pe
+   ("\{" 0x007d)	;; Left Brace
+   ("\}" 0x007d)	;; Right Brace
    ("\|" 0x05c0)	;; Paseq
    ("A" 0x05b8)		;; Qamats
    ("S" 0x05e9)		;; Shin
    ("K" 0x05da)		;; Final Kaf
    ("\:" 0x05f4)	;; Gersahyim p.
+   ("\"" 0x201d)	;; Double Quote
    ("C" 0x05e5)		;; Final Tsadi
    ("N" 0x05df)		;; Final Nun
    ("M" 0x05dd)		;; Final Mem
    ("\<" 0x05e2)	;; Ayin
    ("\>" 0x05d0)	;; Alif
+   ("\?" 0x003f)	;; Question Mark
 
    ;; ALTGR
-;; ((G-1) 0x05bd)	;; Meteg
-;; ((G-2) 0x05a2)	;; Atn. Hafukh
-;; ((G-3) 0x0596)	;; Tipeha
-;; ((G-4) 0x05a5)	;; Merkha
-;; ((G-5) 0x05a6)	;; Merkha Kefula
-;; ((G-6) 0x05ad)	;; Dehi
-;; ((G-7) 0x05a3)	;; Munah
-;; ((G-8) 0x059b)	;; Tevir
-;; ((G-9) 0x05a7)	;; Darga
-;; ((G-0) 0x05aa)	;; Yer. Ben Yomo
-;; ((G-=) 0x0591)	;; Etnahta
-;; ((G-o) 0x05c7)	;; Qad
-;; ((G-\]) 0x059a)	;; Yetiv
-;; ((G-\\) 0x05a4)	;; Mahapakh
-;; ((G-a) 0x05c7)	;; Qamats Qatan
-;; ((G-\') 0x0323)	;; Punctum
-;; ((G-/) 0x05f3)	;; Geresh p.
+   ((G-1) 0x05bd)	;; Meteg
+   ((G-2) 0x05a2)	;; Atn. Hafukh
+   ((G-3) 0x0596)	;; Tipeha
+   ((G-4) 0x05a5)	;; Merkha
+   ((G-5) 0x05a6)	;; Merkha Kefula
+   ((G-6) 0x05ad)	;; Dehi
+   ((G-7) 0x05a3)	;; Munah
+   ((G-8) 0x059b)	;; Tevir
+   ((G-9) 0x05a7)	;; Darga
+   ((G-0) 0x05aa)	;; Yer. Ben Yomo
+   ((G-=) 0x0591)	;; Etnahta
+   ((G-o) 0x05c7)	;; Qad
+   ((G-\]) 0x059a)	;; Yetiv
+   ((G-\\) 0x05a4)	;; Mahapakh
+   ((G-a) 0x05c7)	;; Qamats Qatan
+   ((G-\') 0x0323)	;; Punctum
+   ((G-/) 0x05f3)	;; Geresh p.
 
    ;; ALTGR+SHIFT
-;; ((G-!) 0x0597)	;; Revia
-;; ((G-@) 0x05ae)	;; Zinor
-;; ((G-#) 0x0599)	;; Pashta
-;; ((G-$) 0x05a0)	;; Tel. Gedola
-;; ((G-%) 0x05a9)	;; Tel. Qetana
-;; ((G-^) 0x059f)	;; Tel. Para
-;; ((G-&) 0x05a1)	;; Pazer
-;; ((G-*) 0x0595)	;; Zaq. Gadol
-;; ((G-\() 0x0593)	;; Shalshelet
-;; ((G-\)) 0x0593)	;; Masora C.
-;; ((G-_) 0x05bf)	;; Rafe
-;; ((G-E) 0x05b1)	;; Hat. Segol
-;; ((G-O) 0x05b1)	;; Hat. Qamats
-;; ((G-\{) 0x0594)	;; Zaq. Qatan
-;; ((G-\}) 0x0592)	;; Segolta
-;; ((G-|) 0x05ab)	;; Ole
-;; ((G-A) 0x05b2)	;; Hat. Patah
-;; ((G-H) 0x030a)	;; Ring Above
-;; ((G-:) 0x0594)	;; Sof Pasuq
-;; ((G-\") 0x05c4)	;; Punctum
-;; ((G-<) 0x0307)	;; Maora Dot
-;; ((G->) 0x0308)	;; Maora Dot
+   ((G-\!) 0x0597)	;; Revia
+   ((G-\@) 0x05ae)	;; Zinor
+   ((G-\#) 0x0599)	;; Pashta
+   ((G-\$) 0x05a0)	;; Tel. Gedola
+   ((G-\%) 0x05a9)	;; Tel. Qetana
+   ((G-\^) 0x059f)	;; Tel. Para
+   ((G-\&) 0x05a1)	;; Pazer
+   ((G-\*) 0x0595)	;; Zaq. Gadol
+   ((G-\() 0x0593)	;; Shalshelet
+   ((G-\)) 0x05af)	;; Masora C.
+   ((G-\_) 0x05bf)	;; Rafe
+;; ((G-\+) 0x25cc)	;; Mark Base - seems to have crashed ibus. Uncomment if needed and works.
+   ((G-E) 0x05b1)	;; Hat. Segol
+   ((G-O) 0x05b3)	;; Hat. Qamats
+   ((G-\{) 0x0594)	;; Zaq. Qatan
+   ((G-\}) 0x0592)	;; Segolta
+   ((G-\|) 0x05ab)	;; Ole
+   ((G-A) 0x05b2)	;; Hat. Patah
+   ((G-H) 0x030a)	;; Ring Above
+   ((G-\:) 0x0594)	;; Sof Pasuq
+   ((G-\") 0x05c4)	;; Punctum
+   ((G-\<) 0x0307)	;; Maora Dot
+   ((G-\>) 0x0308)	;; Maora Dot
 
    ))
 
