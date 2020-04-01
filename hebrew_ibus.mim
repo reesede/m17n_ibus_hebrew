@@ -132,7 +132,7 @@
    ((G-\|) 0x05ab)	;; Ole
    ((G-A) 0x05b2)	;; Hat. Patah
    ((G-H) 0x030a)	;; Ring Above
-   ((G-\:) 0x0594)	;; Sof Pasuq
+   ((G-\:) 0x0593)	;; Sof Pasuq
    ((G-\") 0x05c4)	;; Punctum
    ((G-\<) 0x0307)	;; Maora Dot
    ((G-\>) 0x0308)	;; Maora Dot

@@ -14,4 +14,5 @@ the GUI (KDE, Gnome, etc.). With KDE, it can be set up in System Settings > Inpu
 ## History
 
 20200315	DEReese		Published to GitHub.
+20200401	DEReese		Fixed Sof Pasuq.
 
